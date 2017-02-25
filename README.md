@@ -1,27 +1,16 @@
-# GitBook Boilerplate
+#Introducción
 
-# Installation
+##Práctica 2 de la asignatura de Desarrollo de Sistemas Informáticos
 
-```shell
-cd ~/code
+###Primeros pasos en NodeJS
 
-git clone https://github.com/enten/gitbook-boilerplate.git awesome-project
+Esta pŕactica consiste en reescribir los apuntes realizados en la [Práctica 1](http://alu0100826999.gitbooks.io/book-carlos-andrea/content) de la asignatura siguiendo una estructura de directorios diferente simplificando el despliegue de la misma en gh-pages.
 
-cd awesome-project
+####Enlaces:
 
-rm -fr .git
-
-vi package.json
-# edit repository.url and repository.wiki
-
-git remote add origin <url>
-
-npm run build
-# or
-# npm run generate-gitbook && npm run generate-wiki
-
-npm run deploy
-# or
-# npm run deploy-gitbook && npm run deploy-wiki
-```
-__Important__: Wiki must be created on Github
+* Enlace a la desripción de la práctica:
+* Enlace al libro desde Github:
+* Enlace al libro desde Gitbook:
+* Enlace al campus virtual de la asignatura:
+* Enlace a la página personal de Andrea:
+* Enlace a la página personal de Carlos:
