@@ -11,8 +11,8 @@ app.get('/', function (req, res) {
 res.render('index', {title: 'Express'});
 })
 
-var server = app.listen(8080, function () {
+var server = app.listen(8081, function () {
 var host = server.address().address
 var port = server.address().port
-consol.log('Escuchando at http://%s:%s', host, port)
+console.log('Escuchando at http://%s:%s', host, port)
 })

@@ -1,0 +1,24 @@
+{
+  "name": "primeros-pasos-en-nodejs-andrea-carlos-35l1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-andrea-carlos-35l1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-andrea-carlos-35l1/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-andrea-carlos-35l1#readme"
+}
