@@ -15,3 +15,8 @@ gulp.task('deploy&push', ['deploy'], function() {
   return gulp.src('./html/**/*')
   .pipe(ghPages(['git@github.com:alu0100819847/Repo-Ayuda-DSI.git']))
 });
+
+
+gulp.task('serve', shell.task([
+  'gitbook serve txt html'
+]))
