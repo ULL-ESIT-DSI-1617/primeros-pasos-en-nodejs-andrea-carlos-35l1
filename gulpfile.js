@@ -13,7 +13,7 @@ return gulp.src('./html/**/*')
 
 gulp.task('deploypush', ['deploy'], function() {
   return gulp.src('./html/**/*')
-  .pipe(ghPages(['git@github.com:alu0100819847/Repo-Ayuda-DSI.git']))
+  .pipe(ghPages(['git@github.com:ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-andrea-carlos-35l1.git']))
 });
 
 
