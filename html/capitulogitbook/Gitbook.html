@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Cloud9 · GitBook</title>
+        <title>Gitbook · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../capituloMarkdown/Markdown.html" />
+    <link rel="next" href="../capituloghpages/ghpages.html" />
     
     
-    <link rel="prev" href="../capituloPandoc/Pandoc.html" />
+    <link rel="prev" href="../capitulogithub/github.html" />
     
 
     </head>
@@ -141,9 +141,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../capitulogitbook/Gitbook.html">
+        <li class="chapter active" data-level="1.5" data-path="Gitbook.html">
             
-                <a href="../capitulogitbook/Gitbook.html">
+                <a href="Gitbook.html">
             
                     
                     Gitbook
@@ -180,9 +180,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="c9.html">
+        <li class="chapter " data-level="1.8" data-path="../capituloC9/c9.html">
             
-                <a href="c9.html">
+                <a href="../capituloC9/c9.html">
             
                     
                     Cloud9
@@ -236,7 +236,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Cloud9</a>
+        <a href=".." >Gitbook</a>
     </h1>
 </div>
 
@@ -251,20 +251,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="cloud-9">Cloud 9.</h1>
-<h2 id="introducci&#xF3;n">Introducci&#xF3;n.</h2>
-<p>  Cloud 9 es un entorno de desarrollo en la nube basado en ubuntu. Nos permite crear un entorno ubuntu
-que nos proporciona un explorador de archivos, una consola y un editor de texto. Para su uso solo es necesario
-entrar a la p&#xE1;gina de <a href="c9.io">Cloud 9</a> y registrarse.</p>
-<p><img src="Registro.png" alt="Registro">.</p>
-<h2 id="uso-b&#xE1;sico">Uso B&#xE1;sico.</h2>
-<p>  En su pantalla de inicio se nos mostrar&#xE1;n todos nuestros entornos de trabajo, as&#xED; como la posibilidad de crear uno nuevo.</p>
-<p><img src="Conjunto.png" alt="Conjunto"></p>
-<p>  Para crear un entorno nuevo, ser&#xE1; necesario elegir un nombre y a continuaci&#xF3;n se nos proporcionar&#xE1;n una serie de plantillas
-seg&#xFA;n el uso que queramos hacer del entorno.</p>
+                                <h1 id="gitbook">Gitbook</h1>
+<h2 id="introducci&#xF3;n">Introducci&#xF3;n</h2>
+<p>Gitbook es una herramienta implementada usando NodeJs que permite la creaci&#xF3;n simple de libros y documentaci&#xF3;n de proyectos
+haciendo uso de Markdown. Mediante ficheros con extensi&#xF3;n .md gitbook compondr&#xE1; el libro deseado, adem&#xE1;s nos da la posibilidad de
+crear tanto pdf, ebook o web.</p>
+<h2 id="instalaci&#xF3;n">Instalaci&#xF3;n.</h2>
+<p>Para su instalaci&#xF3;n es necesario tener instalado <a href="../capitulo1/nodejs.html">node.js</a>, y el comando necesario sera:
+npm install -g gitbook-cli, pudiendo solicitar el uso de sudo, sudo npm install -g gitbook-cli.
+En este caso la forma de instalaci&#xF3;n es la misma tanto para linux como para mac os.</p>
+<p><img src="Instalador.png" alt="Instalador">.</p>
+<h2 id="uso-b&#xE1;sicos">Uso B&#xE1;sicos</h2>
+<p>Algunos comandos b&#xE1;sicos para el uso de <strong>gitbook</strong> pueden ser:</p>
+<ul>
+<li>gitbook init <nombre_libro>. Crea la estructura b&#xE1;sica para el desarrollo del libro.</nombre_libro></li>
+<li>gitbook build. Compondr&#xE1; un html con el conjunto de ficheros en formato Markdown dentro del directorio.</li>
+<li>gitbook serve. Compondr&#xE1; un html lanzar&#xE1; un servidor local en el puerto 4000 desde el que tendremos acceso al libro.</li>
+</ul>
+<h2 id="gitbookcom">Gitbook.com</h2>
+<p>Para crear un libro en gitbook.com, es necesario estar registrado en la p&#xE1;gina de gitbook:</p>
+<p><img src="NewUser.png" alt="CreandoUser"></p>
+<p>A continuaci&#xF3;n, en el men&#xFA; principal se selecciona la opci&#xF3;n de New Book:</p>
+<p><img src="Nuevo.png" alt="NewBook"></p>
+<p>Seleccionar un tipo de documento y nombre:</p>
 <p><img src="Creando.png" alt="Creando"></p>
-<p>  Al crear el entorno ya podr&#xE9;mos empezar a trabajar como si fuese una consola linux normal y corriente, con la ayuda de un explorador de archivos y un editor de texto.</p>
-<p><img src="Entorno.png" alt="Entorno"></p>
+<p>De esta manera, ya tenemos creada la estructura b&#xE1;sica, y podemos a&#xF1;adir nuestros documentos como si fuese un repositorio normal
+de github:</p>
+<p><img src="URL.png" alt="URL"></p>
+<p><img src="Push.png" alt="Push"></p>
+<p><img src="Confirmacion.png" alt="Confirmaci&#xF3;n"></p>
+<p><img src="LibroCreado.png" alt="Creado"></p>
+<p>Y ya tendr&#xED;amos incluido el libro.</p>
 
                                 
                                 </section>
@@ -292,12 +309,12 @@ seg&#xFA;n el uso que queramos hacer del entorno.</p>
 
             
                 
-                <a href="../capituloPandoc/Pandoc.html" class="navigation navigation-prev " aria-label="Previous page: Pandoc">
+                <a href="../capitulogithub/github.html" class="navigation navigation-prev " aria-label="Previous page: Github">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../capituloMarkdown/Markdown.html" class="navigation navigation-next " aria-label="Next page: Markdown">
+                <a href="../capituloghpages/ghpages.html" class="navigation navigation-next " aria-label="Next page: gh-pages">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -308,7 +325,7 @@ seg&#xFA;n el uso que queramos hacer del entorno.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Cloud9","level":"1.8","depth":1,"next":{"title":"Markdown","level":"1.9","depth":1,"path":"capituloMarkdown/Markdown.md","ref":"capituloMarkdown/Markdown.md","articles":[]},"previous":{"title":"Pandoc","level":"1.7","depth":1,"path":"capituloPandoc/Pandoc.md","ref":"capituloPandoc/Pandoc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"capituloC9/c9.md","mtime":"2017-02-27T14:53:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-27T15:06:39.600Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gitbook","level":"1.5","depth":1,"next":{"title":"gh-pages","level":"1.6","depth":1,"path":"capituloghpages/ghpages.md","ref":"capituloghpages/ghpages.md","articles":[]},"previous":{"title":"Github","level":"1.4","depth":1,"path":"capitulogithub/github.md","ref":"capitulogithub/github.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"capitulogitbook/Gitbook.md","mtime":"2017-02-27T14:53:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-27T15:06:39.600Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

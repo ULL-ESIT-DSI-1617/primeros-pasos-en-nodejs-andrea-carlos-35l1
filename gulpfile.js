@@ -2,9 +2,9 @@ var gulp = require('gulp');
 var shell = require('gulp-shell');
 var ghPages = require('gulp-gh-pages');
 
-gulp.task('build', shell.task([
+gulp.task('build', shell.task(
 'gitbook build txt html'
-]));
+));
 
 gulp.task('deploy', function() {
 return gulp.src('./html/**/*')
@@ -17,6 +17,6 @@ gulp.task('deploypush', ['deploy'], function() {
 });
 
 
-gulp.task('serve', shell.task([
+gulp.task('serve', shell.task(
   'gitbook serve txt html'
-]))
+));
