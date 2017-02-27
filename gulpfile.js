@@ -6,6 +6,12 @@ gulp.task('build', shell.task(
 'gitbook build txt html'
 ));
 
+gulp.task('buildd', function() {
+  return gulp.src('').pipe(shell([
+    'gitbook build txt html'
+  ]))
+});
+
 gulp.task('deploy', function() {
 return gulp.src('./html/**/*')
 .pipe(ghPages());
