@@ -11,7 +11,7 @@ return gulp.src('./html/**/*')
 .pipe(ghPages());
 });
 
-gulp.task('deploy&push', ['deploy'], function() {
+gulp.task('deploypush', ['deploy'], function() {
   return gulp.src('./html/**/*')
   .pipe(ghPages(['git@github.com:alu0100819847/Repo-Ayuda-DSI.git']))
 });
