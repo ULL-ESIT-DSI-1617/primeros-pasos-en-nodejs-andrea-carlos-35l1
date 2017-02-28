@@ -26,6 +26,15 @@ gulp.task('deploypush', ['deploy'], function() {
 //  .pipe(ghPages(['git@github.com:ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-andrea-carlos-35l1.git']))
 //});
 
+gulp.task('deploygb', shell.task([
+    'cd txt'+
+    ';'+
+    'git add .'+
+    ';'+
+    'git commit -m "Actualizando gitbook"'+
+    ';'+
+    'git push https://git.gitbook.com/alu0100819847/prueba.git master'
+    ]));
 
 gulp.task('serve', shell.task(
   'gitbook serve txt html'
