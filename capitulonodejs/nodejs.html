@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>gh-pages · GitBook</title>
+        <title>Node JS · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../capituloPandoc/Pandoc.html" />
+    <link rel="next" href="../capitulogithub/github.html" />
     
     
-    <link rel="prev" href="../capitulogitbook/Gitbook.html" />
+    <link rel="prev" href="../capitulogit/git.html" />
     
 
     </head>
@@ -115,9 +115,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../capitulonodejs/nodejs.html">
+        <li class="chapter active" data-level="1.3" data-path="nodejs.html">
             
-                <a href="../capitulonodejs/nodejs.html">
+                <a href="nodejs.html">
             
                     
                     Node JS
@@ -154,9 +154,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="ghpages.html">
+        <li class="chapter " data-level="1.6" data-path="../capituloghpages/ghpages.html">
             
-                <a href="ghpages.html">
+                <a href="../capituloghpages/ghpages.html">
             
                     
                     gh-pages
@@ -236,7 +236,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >gh-pages</a>
+        <a href=".." >Node JS</a>
     </h1>
 </div>
 
@@ -251,39 +251,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="gh-pages">gh-pages</h1>
-<h2 id="introducci&#xF3;n">Introducci&#xF3;n</h2>
-<p>GitHub Pages (gh-pages) es un servicio de alojamiento gratuito que ofrece GitHub para alojar nuestros proyectos en un sitio web. Sirve tanto para un portafolio, landing page e incluso para crear un blog. Todo de manera gratuita y con repositorios ilimitados. </p>
-<h2 id="uso-para-usuarios-u-organizaciones">Uso para usuarios u organizaciones</h2>
-<p>En primer lugar, debemos crear un repositorio con el nombre: nombreusuario.github.io. Dicho repositorio debe comenzar con nuestro nombre de usuario u organizaci&#xF3;n seguido de github.io.</p>
-<p><img src="crearrepo.png" alt="crearrepo"></p>
-<p>A partir de esto, podemos empezar a generar nuestros commits, tal como hemos visto en cap&#xED;tulos anteriores, haciendo un &quot;git clone URL-remoto&quot; o &quot;git remote add rama-remota URL-remoto&quot;.</p>
-<p>Ahora ya podemos ver todos los cambios dentro del repositorio remoto en la direcci&#xF3;n <a href="https://nombreusuario.github.io" target="_blank">https://nombreusuario.github.io</a>.</p>
-<h2 id="uso-para-proyectos">Uso para proyectos</h2>
-<p>Vamos <a href="https://github.com/" target="_blank">Github</a> y creamos un nuevo repositorio (seguir los pasos descritos en el cap&#xED;tulo de Github) o tambi&#xE9;n podemos utilizar uno ya creado anteriormente. En nuestro caso vamos a coger uno ya existente.</p>
-<p><img src="repo.png" alt="repo"></p>
+                                <h1 id="node-js">Node Js</h1>
+<h2 id="introducci&#xF3;n">Introducci&#xF3;n.</h2>
+<p>NodeJs es un entorno de ejecuci&#xF3;n de java basado en el motor de JavaScript V8 de Chrome.
+NodeJs utiliza como manipulador de paquetes por defecto npm, poseyendo grandes librer&#xED;as de codigo abierto a su disposici&#xF3;n.</p>
+<h2 id="instalaci&#xF3;n">Instalaci&#xF3;n.</h2>
+<p>Para su instalaci&#xF3;n es necesario descargar el instalador en su propia <a href="https://nodejs.org/es/" target="_blank">p&#xE1;gina</a> y seguir las instrucci&#xF3;nes que se van indicando.</p>
+<p><img src="Instalador.png" alt="Instalador"></p>
+<p>En caso de utilizar plataformas como c9, el nodejs ya vendr&#xE1; preinstalado y podemos comprobar su versi&#xF3;n:</p>
+<p><img src="ComprobarVersion.png" alt="Version">   </p>
+<h2 id="uso-b&#xE1;sico">Uso B&#xE1;sico</h2>
+<p>Algunos comandos b&#xE1;sicos para <strong>npm</strong> podr&#xED;an ser:</p>
 <ul>
-<li><p>Vamos a crear la rama gh-pages: git branch gh-pages.</p>
-</li>
-<li><p>Ahora empujamos los cambios de nuestrto repositorio local al remoto (Github): git push origin gh-pages.</p>
-</li>
-<li><p>Ahora ya podemos ver los cambios entrando en: <a href="http://nombreusuario.github.io/nombrerepositorio" target="_blank">http://nombreusuario.github.io/nombrerepositorio</a>.</p>
-</li>
+<li>npm install . Este comando nos permite instalar todas las dependencias encontrados en el fichero package.json.</li>
+<li>npm install <nombre>. Se instala el paquete deseado.</nombre></li>
+<li>npm install -g <nombre>. Se realiza la instalaci&#xF3;n del paquete deseado de forma global.</nombre></li>
+<li>npm install <nombre> --save-dev. Se realiza la instalaci&#xF3;n del paquete deseado como dependencia de desarrollo.</nombre></li>
+<li>npm --help. Se muestra la documentaci&#xF3;n respecto a npm.</li>
 </ul>
-<p><img src="libro.png" alt="libro"></p>
-<p>Por otro lado, podemos <strong>automatizar el despliegue de gh-pages</strong> de la siguiente forma:</p>
+<p>El uso b&#xE1;sico de <strong>NodeJs</strong> es:</p>
 <ul>
-<li>Hacemos: npm install gh-pages --save-dev.</li>
-<li>Ahora debemos crear un fichero llamado deploy.js e introducir las siguietne lineas de c&#xF3;digo:</li>
-</ul>
-<p>var ghpages = require(&apos;gh-pages&apos;);
-var path = require(&apos;path&apos;);</p>
-<p>ghpages.publish(path.join(__dirname, &apos;_book&apos;), function(err) {
-  console.log(&quot;publicaci&#xF3;n finalizada&quot;);
-});</p>
-<ul>
-<li>Una vez tengamos el archivo deploy.js listo, ya podemos ejecutar el siguiente comando para publicar todos los nuevos cambios desde la rama gh-pages:
-npm run deploy</li>
+<li>node. Se habre la consola de NodeJs.</li>
+<li>node nombrefichero.js. Se ejecuta el fichero de codigo JavaScript deseado.</li>
+<li>.exit. Salir de la consola de NodeJs.</li>
 </ul>
 
                                 
@@ -312,12 +302,12 @@ npm run deploy</li>
 
             
                 
-                <a href="../capitulogitbook/Gitbook.html" class="navigation navigation-prev " aria-label="Previous page: Gitbook">
+                <a href="../capitulogit/git.html" class="navigation navigation-prev " aria-label="Previous page: Git">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../capituloPandoc/Pandoc.html" class="navigation navigation-next " aria-label="Next page: Pandoc">
+                <a href="../capitulogithub/github.html" class="navigation navigation-next " aria-label="Next page: Github">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -328,7 +318,7 @@ npm run deploy</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gh-pages","level":"1.6","depth":1,"next":{"title":"Pandoc","level":"1.7","depth":1,"path":"capituloPandoc/Pandoc.md","ref":"capituloPandoc/Pandoc.md","articles":[]},"previous":{"title":"Gitbook","level":"1.5","depth":1,"path":"capitulogitbook/Gitbook.md","ref":"capitulogitbook/Gitbook.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"capituloghpages/ghpages.md","mtime":"2017-02-27T15:21:00.140Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-27T16:27:46.470Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Node JS","level":"1.3","depth":1,"next":{"title":"Github","level":"1.4","depth":1,"path":"capitulogithub/github.md","ref":"capitulogithub/github.md","articles":[]},"previous":{"title":"Git","level":"1.2","depth":1,"path":"capitulogit/git.md","ref":"capitulogit/git.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"capitulonodejs/nodejs.md","mtime":"2017-02-27T15:21:00.152Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-27T16:27:46.470Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

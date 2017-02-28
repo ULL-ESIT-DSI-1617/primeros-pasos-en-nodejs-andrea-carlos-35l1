@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>gh-pages · GitBook</title>
+        <title>Gitbook · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../capituloPandoc/Pandoc.html" />
+    <link rel="next" href="../capituloghpages/ghpages.html" />
     
     
-    <link rel="prev" href="../capitulogitbook/Gitbook.html" />
+    <link rel="prev" href="../capitulogithub/github.html" />
     
 
     </head>
@@ -141,9 +141,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../capitulogitbook/Gitbook.html">
+        <li class="chapter active" data-level="1.5" data-path="Gitbook.html">
             
-                <a href="../capitulogitbook/Gitbook.html">
+                <a href="Gitbook.html">
             
                     
                     Gitbook
@@ -154,9 +154,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="ghpages.html">
+        <li class="chapter " data-level="1.6" data-path="../capituloghpages/ghpages.html">
             
-                <a href="ghpages.html">
+                <a href="../capituloghpages/ghpages.html">
             
                     
                     gh-pages
@@ -236,7 +236,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >gh-pages</a>
+        <a href=".." >Gitbook</a>
     </h1>
 </div>
 
@@ -251,40 +251,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="gh-pages">gh-pages</h1>
+                                <h1 id="gitbook">Gitbook</h1>
 <h2 id="introducci&#xF3;n">Introducci&#xF3;n</h2>
-<p>GitHub Pages (gh-pages) es un servicio de alojamiento gratuito que ofrece GitHub para alojar nuestros proyectos en un sitio web. Sirve tanto para un portafolio, landing page e incluso para crear un blog. Todo de manera gratuita y con repositorios ilimitados. </p>
-<h2 id="uso-para-usuarios-u-organizaciones">Uso para usuarios u organizaciones</h2>
-<p>En primer lugar, debemos crear un repositorio con el nombre: nombreusuario.github.io. Dicho repositorio debe comenzar con nuestro nombre de usuario u organizaci&#xF3;n seguido de github.io.</p>
-<p><img src="crearrepo.png" alt="crearrepo"></p>
-<p>A partir de esto, podemos empezar a generar nuestros commits, tal como hemos visto en cap&#xED;tulos anteriores, haciendo un &quot;git clone URL-remoto&quot; o &quot;git remote add rama-remota URL-remoto&quot;.</p>
-<p>Ahora ya podemos ver todos los cambios dentro del repositorio remoto en la direcci&#xF3;n <a href="https://nombreusuario.github.io" target="_blank">https://nombreusuario.github.io</a>.</p>
-<h2 id="uso-para-proyectos">Uso para proyectos</h2>
-<p>Vamos <a href="https://github.com/" target="_blank">Github</a> y creamos un nuevo repositorio (seguir los pasos descritos en el cap&#xED;tulo de Github) o tambi&#xE9;n podemos utilizar uno ya creado anteriormente. En nuestro caso vamos a coger uno ya existente.</p>
-<p><img src="repo.png" alt="repo"></p>
+<p>Gitbook es una herramienta implementada usando NodeJs que permite la creaci&#xF3;n simple de libros y documentaci&#xF3;n de proyectos
+haciendo uso de Markdown. Mediante ficheros con extensi&#xF3;n .md gitbook compondr&#xE1; el libro deseado, adem&#xE1;s nos da la posibilidad de
+crear tanto pdf, ebook o web.</p>
+<h2 id="instalaci&#xF3;n">Instalaci&#xF3;n.</h2>
+<p>Para su instalaci&#xF3;n es necesario tener instalado <a href="../capitulo1/nodejs.html">node.js</a>, y el comando necesario sera:
+npm install -g gitbook-cli, pudiendo solicitar el uso de sudo, sudo npm install -g gitbook-cli.
+En este caso la forma de instalaci&#xF3;n es la misma tanto para linux como para mac os.</p>
+<p><img src="Instalador.png" alt="Instalador">.</p>
+<h2 id="uso-b&#xE1;sicos">Uso B&#xE1;sicos</h2>
+<p>Algunos comandos b&#xE1;sicos para el uso de <strong>gitbook</strong> pueden ser:</p>
 <ul>
-<li><p>Vamos a crear la rama gh-pages: git branch gh-pages.</p>
-</li>
-<li><p>Ahora empujamos los cambios de nuestrto repositorio local al remoto (Github): git push origin gh-pages.</p>
-</li>
-<li><p>Ahora ya podemos ver los cambios entrando en: <a href="http://nombreusuario.github.io/nombrerepositorio" target="_blank">http://nombreusuario.github.io/nombrerepositorio</a>.</p>
-</li>
+<li>gitbook init <nombre_libro>. Crea la estructura b&#xE1;sica para el desarrollo del libro.</nombre_libro></li>
+<li>gitbook build. Compondr&#xE1; un html con el conjunto de ficheros en formato Markdown dentro del directorio.</li>
+<li>gitbook serve. Compondr&#xE1; un html lanzar&#xE1; un servidor local en el puerto 4000 desde el que tendremos acceso al libro.</li>
 </ul>
-<p><img src="libro.png" alt="libro"></p>
-<p>Por otro lado, podemos <strong>automatizar el despliegue de gh-pages</strong> de la siguiente forma:</p>
-<ul>
-<li>Hacemos: npm install gh-pages --save-dev.</li>
-<li>Ahora debemos crear un fichero llamado deploy.js e introducir las siguietne lineas de c&#xF3;digo:</li>
-</ul>
-<p>var ghpages = require(&apos;gh-pages&apos;);
-var path = require(&apos;path&apos;);</p>
-<p>ghpages.publish(path.join(__dirname, &apos;_book&apos;), function(err) {
-  console.log(&quot;publicaci&#xF3;n finalizada&quot;);
-});</p>
-<ul>
-<li>Una vez tengamos el archivo deploy.js listo, ya podemos ejecutar el siguiente comando para publicar todos los nuevos cambios desde la rama gh-pages:
-npm run deploy</li>
-</ul>
+<h2 id="gitbookcom">Gitbook.com</h2>
+<p>Para crear un libro en gitbook.com, es necesario estar registrado en la p&#xE1;gina de gitbook:</p>
+<p><img src="NewUser.png" alt="CreandoUser"></p>
+<p>A continuaci&#xF3;n, en el men&#xFA; principal se selecciona la opci&#xF3;n de New Book:</p>
+<p><img src="Nuevo.png" alt="NewBook"></p>
+<p>Seleccionar un tipo de documento y nombre:</p>
+<p><img src="Creando.png" alt="Creando"></p>
+<p>De esta manera, ya tenemos creada la estructura b&#xE1;sica, y podemos a&#xF1;adir nuestros documentos como si fuese un repositorio normal
+de github:</p>
+<p><img src="URL.png" alt="URL"></p>
+<p><img src="Push.png" alt="Push"></p>
+<p><img src="Confirmacion.png" alt="Confirmaci&#xF3;n"></p>
+<p><img src="LibroCreado.png" alt="Creado"></p>
+<p>Y ya tendr&#xED;amos incluido el libro.</p>
 
                                 
                                 </section>
@@ -312,12 +309,12 @@ npm run deploy</li>
 
             
                 
-                <a href="../capitulogitbook/Gitbook.html" class="navigation navigation-prev " aria-label="Previous page: Gitbook">
+                <a href="../capitulogithub/github.html" class="navigation navigation-prev " aria-label="Previous page: Github">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../capituloPandoc/Pandoc.html" class="navigation navigation-next " aria-label="Next page: Pandoc">
+                <a href="../capituloghpages/ghpages.html" class="navigation navigation-next " aria-label="Next page: gh-pages">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -328,7 +325,7 @@ npm run deploy</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gh-pages","level":"1.6","depth":1,"next":{"title":"Pandoc","level":"1.7","depth":1,"path":"capituloPandoc/Pandoc.md","ref":"capituloPandoc/Pandoc.md","articles":[]},"previous":{"title":"Gitbook","level":"1.5","depth":1,"path":"capitulogitbook/Gitbook.md","ref":"capitulogitbook/Gitbook.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"capituloghpages/ghpages.md","mtime":"2017-02-27T15:21:00.140Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-27T16:27:46.470Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gitbook","level":"1.5","depth":1,"next":{"title":"gh-pages","level":"1.6","depth":1,"path":"capituloghpages/ghpages.md","ref":"capituloghpages/ghpages.md","articles":[]},"previous":{"title":"Github","level":"1.4","depth":1,"path":"capitulogithub/github.md","ref":"capitulogithub/github.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"capitulogitbook/Gitbook.md","mtime":"2017-02-27T15:21:00.144Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-27T16:27:46.470Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
