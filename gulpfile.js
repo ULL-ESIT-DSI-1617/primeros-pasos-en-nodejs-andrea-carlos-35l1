@@ -11,14 +11,20 @@ return gulp.src('./html/**/*')
 .pipe(ghPages());
 });
 
-gulp.task('deploypush', ['dp'], shell.task(
-  'rm -rf html'
-  ));
-  
-gulp.task('dp', ['deploy'], function() {
+gulp.task('deploypush', ['deploy'], function() {
   return gulp.src('./html/**/*')
   .pipe(ghPages(['git@github.com:ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-andrea-carlos-35l1.git']))
-});
+})
+
+//
+//gulp.task('deploypush', ['dp'], shell.task(
+//  'rm -rf html'
+//  ));
+//  
+//gulp.task('dp', ['deploy'], function() {
+//  return gulp.src('./html/**/*')
+//  .pipe(ghPages(['git@github.com:ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-andrea-carlos-35l1.git']))
+//});
 
 
 gulp.task('serve', shell.task(
