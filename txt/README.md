@@ -1,8 +1,8 @@
 #Introducción
 
-##Práctica 2 de la asignatura de Desarrollo de Sistemas Informáticos
+## Práctica 2 de la asignatura de Desarrollo de Sistemas Informáticos
 
-###Primeros pasos en NodeJS
+### Primeros pasos en NodeJS
 
 Esta pŕactica consiste en reescribir los apuntes realizados en la [Práctica 1](http://alu0100826999.gitbooks.io/book-carlos-andrea/content) de la asignatura siguiendo una estructura de directorios diferente simplificando el despliegue de la misma en gh-pages.
 
