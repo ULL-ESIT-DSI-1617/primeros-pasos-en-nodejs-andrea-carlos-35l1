@@ -33,7 +33,7 @@ gulp.task('deploygb', shell.task([
     ';'+
     'git commit -m "Actualizando gitbook"'+
     ';'+
-    'git push https://git.gitbook.com/alu0100826999/book2-carlos-andrea.git master'
+    'git push https://git.gitbook.com/alu0100819847/carlos-andrea-2.git master'
     ]));
 
 gulp.task('serve', shell.task(
