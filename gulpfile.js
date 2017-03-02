@@ -14,9 +14,32 @@ return gulp.src('./html/**/*')
 gulp.task('deploypush', ['deploy'], function() {
   return gulp.src('./html/**/*')
   .pipe(ghPages(['git@github.com:ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-andrea-carlos-35l1.git']))
-});
+})
 
+//
+//gulp.task('deploypush', ['dp'], shell.task(
+//  'rm -rf html'
+//  ));
+//  
+//gulp.task('dp', ['deploy'], function() {
+//  return gulp.src('./html/**/*')
+//  .pipe(ghPages(['git@github.com:ULL-ESIT-DSI-1617/primeros-pasos-en-nodejs-andrea-carlos-35l1.git']))
+//});
+
+gulp.task('deploygb', shell.task([
+    'cd txt'+
+    ';'+
+    'git add .'+
+    ';'+
+    'git commit -m "Actualizando gitbook"'+
+    ';'+
+    'git push https://git.gitbook.com/alu0100819847/carlos-andrea-2.git master'
+    ]));
 
 gulp.task('serve', shell.task(
   'gitbook serve txt html'
 ));
+
+gulp.task('serveiaas', shell.task([
+    'ssh usuario@10.6.129.232 node /home/usuario/dsi/primeros-pasos-en-nodejs-andrea-carlos-35l1/server.js'
+]))
